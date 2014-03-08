@@ -1,0 +1,140 @@
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlTopRow"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice1"
+                android:src="@drawable/dice"/>
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice2"
+                android:src="@drawable/dice3"
+                android:layout_centerHorizontal="true"/>
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice3"
+                android:src="@drawable/three7"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlBottomRow"
+            android:layout_below="@+id/rlTopRow"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice4"
+                android:src="@drawable/dice4"/>
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice5"
+                android:src="@drawable/dice1"
+                android:layout_centerHorizontal="true"/>
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dice6"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dice6"/>
+    </RelativeLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll Dice"
+            android:id="@+id/button"
+            android:layout_below="@+id/rlBottomRow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:onClick="onRollDiceClicked"
+            android:background="@drawable/button"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guess:"
+            android:id="@+id/textView"
+            android:layout_below="@+id/button"
+            android:layout_alignLeft="@+id/rlBottomRow"
+            android:layout_alignStart="@+id/rlBottomRow"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"/>
+
+    <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etGuess"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_marginLeft="10dp"
+            android:editable="true"
+            android:maxLines="1"
+            android:inputType="number"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer:"
+            android:id="@+id/textView2"
+            android:layout_alignParentBottom="false"
+            android:textSize="24dp"
+            android:visibility="visible"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="20dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAnswer"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignTop="@+id/textView2"
+            android:textSize="24dp"
+            android:layout_marginLeft="10dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You were right!"
+            android:id="@+id/tvRightOrWrong"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvAnswer"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/llAdview">
+    </LinearLayout>
+</RelativeLayout>
